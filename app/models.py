@@ -50,8 +50,8 @@ class Product(BaseModel):#menu items
     # id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(50), nullable=True)
     price = Column(Float, default=0)
-    image = Column(String(500)),
-    quantity = Column(Integer,nullable=False),
+    image = Column(String(500))
+    quantity = Column(Integer,nullable=False)
     category_id = Column(Integer, ForeignKey(Category.id), nullable=False)
     receipt_details = relationship('ReceiptDetails', backref='product', lazy=True)
     comments = relationship('Comment', backref='product', lazy=True)
@@ -132,9 +132,9 @@ if __name__ == '__main__':
                       image='https://img.sndimg.com/food/image/upload/q_92,fl_progressive,w_1200,c_scale/v1/img/recipes/17/25/60/piczLfe61.jpg')
         m13 = Product(name='Pudding', price=3.19, category_id=3, quantity=50,
                       image='https://www.flavcity.com/wp-content/uploads/2021/03/vanilla-pudding.jpg')
-        m13 = Product(name='Ice Cream', price=2.19, category_id=3, quantity=50,
+        m14 = Product(name='Ice Cream', price=2.19, category_id=3, quantity=50,
                       image='https://handletheheat.com/wp-content/uploads/2021/06/homemade-vanilla-ice-cream.jpg')
-        db.session.add_all([m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13])
+        db.session.add_all([m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13,m14])
         db.session.commit()
 
 
