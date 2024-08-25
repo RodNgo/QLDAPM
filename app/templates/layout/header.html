@@ -1,7 +1,21 @@
+<style>
+        .header {
+            background-color: #F29F05;
+            color: Dark; /* Màu chữ của header */
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .navbar-brand
+        {
+            font-size: 30px;
+            font-weight: bold;
+        }
+</style>
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">DAHATA BOOKSTORE</a>
+    <nav class="navbar navbar-expand-sm navbar-light header ">
+        <div class="container-fluid header" >
+            <a class="navbar-brand" href="#">KLHFastFood</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -10,11 +24,17 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/">Trang chủ</a>
                     </li>
-                    {% for c in categories %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="/?cate_id={{c.id}}">{{ c.name }}</a>
-                    </li>
+
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Danh mục món ăn</a>
+                      <ul class="dropdown-menu">
+                        {% for c in categories %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?cate_id={{c.id}}">{{ c.name }}</a>
+                        </li>
                     {% endfor %}
+                      </ul>
+                    </li>
                     {%if current_user.is_authenticated%}
 <!--                    <li class="nav-item">-->
 <!--                          <a class="nav-link text-success" ></a>-->

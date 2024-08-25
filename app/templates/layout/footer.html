@@ -1,183 +1,37 @@
 {% block content %}
-<style>
-    footer{
 
-    background-color:#000022;
-    color:dark;
-    position:relative;
-    bottom:0;
-   width:100%;
-   height:auto;
-   padding:5px;
- }
-     footer ul{
-    list-style-type:none;
- }
+<div class="container-fluid text-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s"
+     style="background-color: #F29F05">
+    <div class="container py-5 text-dark">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-dark mb-4">Địa Chỉ</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Nhơn Đức, Nhà Bè, Ho Chi Minh City</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>KLH.FastFood@gmail.com</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>+012 345 67890</p>
 
- footer ul li{
-    padding:5px 0 ;
- }
-
- footer ul a{
-    text-decoration:none;
-    color:dark;
- }
-
-footer .container{
-    justify-content: space-between;
-    flex-wrap:wrap;
-}
-
-footer i{
-    padding:0 15px 0 0;
-}
-
-.size{
-    font-size:17px;
-}
-
-.container > div{
-    width:var(--width);
-    padding:5px;
-}
-
-.container .aboutus{
-    width:50%;
-}
-
-.container h2 {
-    padding:10px 0;
-    position:relative;
-    color:#555;
-}
-
-.container p {
-    padding:10px 0;
-    position:relative;
-    color:#555;
-}
-
-.container1 p {
-    padding:10px 0;
-    position:relative;
-    color:#555;
-}
-
-.container h2::after{
-    content:"";
-    height:2px;
-    width:50px;
-    background-color:#FF0000;
-    position:absolute;
-    display:block;
-}
-
-.aboutus ul{
-    margin-top:20px;
-}
-
-.aboutus .icons li{
-    margin-right:10px;
-    border-radius:4px;
-    background-color:#222;
-    width:40px;
-    height:40px;
-    padding-top:0;
-}
-
-.aboutus .icons .fa{
-    font-size:20px;
-    color:#fff;
-}
-
-.icons li  i{
-     display: flex;
-     width:55px;
-    height:40px;
-    justify-content: center;
-    align-items:center;
-}
-
-.icons li:hover {
-    background-color:#FF0000;
-}
-
-.formemail input.email{
-    height:40px;
-    width:240px;
-    font-size:18px;
-    padding:3px;
-}
-
-.formemail button{
-    font-size:20px;
-    padding:5px 20px;
-    margin-top:10px;
-    background-color:#222;
-    color:black;
-    border-radius:4px;
-    border:#FF0000;
-}
-
-.formemail button:hover{
-    background-color:#FF0000;
-    border:#FF0000;
-}
-
-section {
-    margin-top:100px;
-}
-
-.link >li > a:hover{
-    color:#555;
-}
-
-.contact i{
-    font-size:20px;
-    color:#555;
-}
-
-.flex2{
-    display:flex;
-    text-align:left;
-}
-
-</style>
-<footer id="lienhe">
-    <div class="size container flex2">
-            <div class="aboutus box">
-                <h2>Về chúng tôi</h2>
-                <p class="size">Tại Dahata Bookstore, chúng tôi tin rằng sách có sức mạnh thay đổi cuộc sống và mở ra cánh cửa cho sự hiểu biết và sự phát triển cá nhân. Sứ mệnh của chúng tôi là truyền cảm hứng, khuyến khích sự sáng tạo và tạo ra một cộng đồng đam mê về sách.</p>
             </div>
-
-            <div class="contacts box">
-                <h2>Thông tin liên hệ</h2>
-                <ul class="contact">
-                    <li><span class="flex2 address" style="color:#fff">
-                            <i class="fa fa-map-marker size"></i>
-                            Đường số 1 <br>
-                            Quận 1 <br>
-                            Thành Phố Hồ Chí Minh Việt Nam </span>
-                    </li>
-
-                    <li>
-                        <span class="flex2">
-                            <i class="size fa fa-phone"></i>
-                            <p> <a href="#">+84 123 456 789</a>
-                                <br>
-                                <a href="#">+84 987 654 321</a>
-                            </p>
-                        </span>
-                    </li>
-
-                    <li>
-                        <span class="flex2">
-                            <i class="<i class="fas fa-envelope"></i></i>
-                            <a href="#">diachiemail@gmail.com</a>
-                        </span>
-                    </li>
-                </ul>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-dark mb-4 text-dark">Dịch vụ</h4>
+                <a class="btn btn-link text-dark" href="">Xem món</a>
+                <a class="btn btn-link text-dark" href="">Đặt đặt món</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-dark mb-4">Đường Dẫn Nhanh</h4>
+                <a class="btn btn-link text-dark" href="">Trang Chủ</a>
+                <a class="btn btn-link text-dark" href="">Về chúng tôi</a>
+                <a class="btn btn-link text-dark" href="">Đặt món</a>
+                <a class="btn btn-link text-dark" href="">Xem món</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp
+                    </button>
+                </div>
             </div>
         </div>
-</footer>
+    </div>
+</div>
+
 {% endblock %}
